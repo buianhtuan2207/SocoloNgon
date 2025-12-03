@@ -1,3 +1,7 @@
+body {
+  width: 1280px;
+}
+
 .header {
   width: 100%;
   padding: 15px 40px;
@@ -38,7 +42,7 @@
 .header .search-box {
   width: 30%;
   position: relative;
-  right: -130px;
+  right: -170px;
 }
 .header .search-box input {
   width: 400px;
@@ -50,19 +54,25 @@
 .header .search-box .icons {
   color: #111;
   position: absolute;
-  right: 0;
+  right: -25px;
   top: 12px;
+}
+.header .search-box .icons:hover {
+  color: #ffcc80;
 }
 .header .icon-box {
   width: 20%;
   display: flex;
   gap: 30px;
   position: relative;
-  right: -130px;
+  right: -190px;
 }
 .header .icon-box .icons {
   color: #fff;
   font-size: 16px;
+}
+.header .icon-box .icons:hover {
+  color: #ffcc80;
 }
 
 /*# sourceMappingURL=style.css.map */
