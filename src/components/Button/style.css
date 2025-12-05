@@ -1,0 +1,50 @@
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.35s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.c-btn--primary {
+  background: #d35400;
+  color: white;
+}
+.c-btn--primary:hover {
+  background: var(--bg-dard);
+  transform: scale(1.05);
+}
+.c-btn--secondary {
+  background: #3e2723;
+  color: white;
+}
+.c-btn--outline {
+  border: 2px solid #d35400;
+  color: #d35400;
+  background: transparent;
+}
+.c-btn--outline:hover {
+  background: #d35400;
+  color: white;
+}
+.c-btn--small {
+  padding: 10px 24px;
+  font-size: 14px;
+}
+.c-btn--medium {
+  padding: 14px 32px;
+  font-size: 16px;
+}
+.c-btn--large {
+  padding: 18px 44px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

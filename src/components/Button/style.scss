@@ -1,0 +1,45 @@
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.35s;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--primary {
+    background: #d35400;
+    color: white;
+
+    &:hover {
+      background: var(--bg-dard);
+      transform: scale(1.05);
+    }
+  }
+
+  &--secondary {
+    background: #3e2723;
+    color: white;
+  }
+
+  &--outline {
+    border: 2px solid #d35400;
+    color: #d35400;
+    background: transparent;
+
+    &:hover {
+      background: #d35400;
+      color: white;
+    }
+  }
+
+  &--small { padding: 10px 24px; font-size: 14px; }
+  &--medium { padding: 14px 32px; font-size: 16px; }
+  &--large { padding: 18px 44px; font-size: 18px; }
+}
