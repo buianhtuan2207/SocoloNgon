@@ -3,7 +3,7 @@ import "./featuredProducts.scss"
 const FeaturedProducts = () => {
     return (
         <section>
-            <h2>Sản phẩm nổi bật</h2>
+            <h2><span className="text">Sản phẩm nổi bật</span></h2>
             <CardProduct/>
         </section>
     );

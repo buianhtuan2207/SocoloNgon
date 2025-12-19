@@ -1,6 +1,4 @@
 import Banner from "../../components/Banner";
-import FeatureHighlights from "../../components/Feature";
-import CardProduct from "../../components/CardProduct";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import './style.scss';
 
@@ -16,7 +14,6 @@ export default function Home() {
                 buttonLink="/promotion"
                 image="https://royce.vn/wp-content/uploads/2019/12/H8-550x550.jpg"
             />
-            <FeatureHighlights />
             <div className="container">
                 <div className="home-content">
                     <FeaturedProducts/>
