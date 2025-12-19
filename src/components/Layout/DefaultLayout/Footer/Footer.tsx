@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
-import Icon from '../../../Icons';
-import Icons from "../../../Icons";
+import Icon from '../../../Icons/Icon';
+import Icons from "../../../Icons/Icon";
 
 export default function Footer() {
     return (

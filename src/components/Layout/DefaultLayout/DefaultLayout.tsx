@@ -1,6 +1,6 @@
-import Header from './Header'
+import Header from './Header/Header'
 import './style.scss';
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 
 function DefaultLayout({ children }) {
     return (
