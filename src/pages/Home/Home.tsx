@@ -1,6 +1,6 @@
-import Banner from "../../components/Banner";
-import FeatureHighlights from "../../components/Feature";
-import CardProduct from "../../components/CardProduct";
+import Banner from "../../components/Banner/Banner";
+import FeatureHighlights from "../../components/Feature/Feature";
+import CardProduct from "../../components/CardProduct/CardProduct";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import './style.scss';
 
