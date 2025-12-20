@@ -1,0 +1,31 @@
+.filter-menu .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #666;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+.filter-menu .menu-item:hover {
+  color: #e65100;
+}
+.filter-menu .menu-item.active {
+  color: #e65100;
+  font-weight: 700;
+}
+.filter-menu .menu-item.active .count {
+  background-color: rgb(255, 222.2847826087, 204.5);
+  color: #e65100;
+  font-weight: 700;
+}
+.filter-menu .menu-item .count {
+  background-color: #f8f9fa;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/*# sourceMappingURL=style.css.map */
