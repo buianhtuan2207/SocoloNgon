@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "../pages/Home/Home";
+import Product from "../pages/Product/Product";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -11,6 +12,7 @@ export type AppRoute = {
 /* Gán type cho routes */
 const publicRoutes: AppRoute[] = [
     {path: "/", component: Home,},
+    { path: "/products", component: Product },
 ];
 
 const privateRoutes: AppRoute[] = [];
