@@ -1,0 +1,16 @@
+.filter-tag .btn-tag {
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border: 1px solid #eee;
+  background: white;
+  color: #666;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.filter-tag .btn-tag:hover, .filter-tag .btn-tag.active {
+  background-color: #e65100;
+  color: white;
+  border-color: #e65100;
+}
+
+/*# sourceMappingURL=style.css.map */
