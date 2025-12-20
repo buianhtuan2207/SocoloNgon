@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Icon from '../../../Icons';
+import Icon from '../../../Icons/Icon';
 
 export default function Header() {
     return (
