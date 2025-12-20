@@ -1,0 +1,22 @@
+$primary-orange: #e65100;
+
+.filter-radio {
+  .form-check-input {
+    cursor: pointer;
+    &:checked {
+      background-color: $primary-orange;
+      border-color: $primary-orange;
+    }
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    color: #555;
+    font-size: 0.95rem;
+
+    &.highlight {
+      color: $primary-orange;
+      font-weight: 600;
+    }
+  }
+}
