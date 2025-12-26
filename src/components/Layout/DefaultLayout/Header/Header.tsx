@@ -12,7 +12,7 @@ export default function Header() {
                 <h2 className="logo">SocolaShop</h2>
 
                 <nav className="menu d-none d-md-flex gap-4">
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                     <a href="#">Products</a>
                     <a href="#">Promotions</a>
                     <a href="#">About</a>
@@ -25,7 +25,6 @@ export default function Header() {
                 </div>
 
                 <div className="icon-box d-flex gap-3">
-                    <Icon icon="shopping-cart" className="icons" />
                     {user ? (
                         <span>Xin chào {user.name}</span>
                     ) : (
@@ -33,6 +32,10 @@ export default function Header() {
                             <Icon icon="user" className="icons" />
                         </Link>
                     )}
+                    <Link to="/wishlist">
+                        <Icon icon="heart" className="icons" />
+                    </Link>
+                    <Icon icon="shopping-cart" className="icons" />
                 </div>
             </div>
         </header>
