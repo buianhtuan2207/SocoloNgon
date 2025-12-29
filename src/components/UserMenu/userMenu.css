@@ -19,8 +19,8 @@
   font-size: 14px;
   white-space: nowrap;
 }
-.user-menu-container .user-chip .icons {
-  color: #fff;
+.user-menu-container .user-chip .user-icon {
+  color: #fff !important;
 }
 .user-menu-container {
   /* Định vị Menu thả xuống để không làm biến dạng Header */
@@ -51,7 +51,7 @@
   color: #5d4037 !important;
 }
 .user-menu-container .user-dropdown-menu a.logout-btn {
-  color: #e53935 !important;
+  color: #d32f2f !important;
   border-top: 1px solid #eee;
 }
 .user-menu-container {

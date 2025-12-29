@@ -82,6 +82,9 @@ $primary: #fff;
     align-items: center;
     gap: 15px;
 
+    .user-icon-only{
+      color: $primary;
+    }
     .icon-link {
       color: $primary;
       text-decoration: none;

@@ -87,6 +87,9 @@
   align-items: center;
   gap: 15px;
 }
+.header .icon-group .user-icon-only {
+  color: #fff;
+}
 .header .icon-group .icon-link {
   color: #fff;
   text-decoration: none;
