@@ -1,0 +1,19 @@
+$primary-orange: #e65100;
+
+.filter-tag {
+  .btn-tag {
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border: 1px solid #eee;
+    background: white;
+    color: #666;
+    border-radius: 6px;
+    transition: 0.2s;
+
+    &:hover, &.active {
+      background-color: $primary-orange;
+      color: white;
+      border-color: $primary-orange;
+    }
+  }
+}

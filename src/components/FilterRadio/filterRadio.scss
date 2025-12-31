@@ -1,0 +1,33 @@
+$primary-orange: #e65100;
+
+.filter-radio {
+  .form-check {
+    padding-left: 40px;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .form-check-input {
+    cursor: pointer;
+    float: left;
+    margin-left: -25px;
+
+    &:checked {
+      background-color: $primary-orange;
+      border-color: $primary-orange;
+    }
+  }
+
+  .form-check-label {
+    cursor: pointer;
+    color: #555;
+    font-size: 0.95rem;
+    padding-left: 30px;
+    display: block; 
+
+    &.highlight {
+      color: $primary-orange;
+      font-weight: 600;
+    }
+  }
+}

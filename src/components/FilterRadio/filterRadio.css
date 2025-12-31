@@ -1,0 +1,27 @@
+.filter-radio .form-check {
+  padding-left: 40px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.filter-radio .form-check-input {
+  cursor: pointer;
+  float: left;
+  margin-left: -25px;
+}
+.filter-radio .form-check-input:checked {
+  background-color: #e65100;
+  border-color: #e65100;
+}
+.filter-radio .form-check-label {
+  cursor: pointer;
+  color: #555;
+  font-size: 0.95rem;
+  padding-left: 30px;
+  display: block;
+}
+.filter-radio .form-check-label.highlight {
+  color: #e65100;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=filterRadio.css.map */

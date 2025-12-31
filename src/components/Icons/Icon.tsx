@@ -1,8 +1,5 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-
-// Solid icons – miễn phí
 import {
     faUser,
     faShoppingCart,
@@ -22,6 +19,7 @@ import {
     faCheck,
     faChevronDown,
     faChevronRight,
+    faChevronLeft,
     faGift,
     faTag,
     faPercent,
@@ -29,7 +27,6 @@ import {
     faHome,
 } from '@fortawesome/free-solid-svg-icons';
 
-// Brand icons – mạng xã hội & thanh toán
 import {
     faFacebookF,
     faInstagram,
@@ -37,9 +34,7 @@ import {
     faTiktok, faGoogle,
 } from '@fortawesome/free-brands-svg-icons';
 
-// Thêm tất cả icon vào library một lần duy nhất
 library.add(
-    // Solid
     faUser,
     faShoppingCart,
     faSearch,
@@ -58,13 +53,12 @@ library.add(
     faCheck,
     faChevronDown,
     faChevronRight,
+    faChevronLeft,
     faGift,
     faTag,
     faPercent,
     faArrowRight,
     faHome,
-
-    // Brands
     faFacebookF,
     faInstagram,
     faYoutube,
@@ -72,5 +66,4 @@ library.add(
     faGoogle,
 );
 
-// Export default chính là FontAwesomeIcon đã được config sẵn
 export default FontAwesomeIcon;
