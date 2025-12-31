@@ -4,9 +4,12 @@ import FilterWidget from '../FilterWidget/FilterWidget';
 import FilterMenu from '../FilterMenu/FilterMenu';
 import FilterRadio from '../FilterRadio/FilterRadio';
 import FilterTag from '../FilterTag/FilterTag';
-import { CATEGORIES, FLAVORS, SHAPES } from '../../data/filters';
 
+// Interface nhận dữ liệu full từ cha
 interface SidebarProps {
+    categories: any[];
+    flavors: any[];
+    shapes: any[];
     filterState: {
         category: string;
         flavor: string;
@@ -15,21 +18,24 @@ interface SidebarProps {
     onFilterChange: (type: 'category' | 'flavor' | 'shape', value: string) => void;
 }
 
-export default function SidebarFilter({ filterState, onFilterChange }: SidebarProps) {
+export default function SidebarFilter({
+                                          categories, flavors, shapes, // Nhận data từ props
+                                          filterState, onFilterChange
+                                      }: SidebarProps) {
     return (
         <aside className="sidebar-container">
             <FilterWidget title="Danh mục">
                 <FilterMenu
-                    items={CATEGORIES}
+                    items={categories}
                     activeValue={filterState.category}
                     onSelect={(val) => onFilterChange('category', val)}
                 />
             </FilterWidget>
 
-            <FilterWidget title="Hương vị (Theo loại)">
+            <FilterWidget title="Hương vị">
                 <FilterRadio
                     name="flavor"
-                    items={FLAVORS}
+                    items={flavors}
                     selectedId={filterState.flavor}
                     onChange={(val) => onFilterChange('flavor', val)}
                 />
@@ -37,7 +43,7 @@ export default function SidebarFilter({ filterState, onFilterChange }: SidebarPr
 
             <FilterWidget title="Hình thức">
                 <FilterTag
-                    items={SHAPES}
+                    items={shapes}
                     activeValue={filterState.shape}
                     onSelect={(val) => onFilterChange('shape', val)}
                 />

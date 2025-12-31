@@ -4,6 +4,7 @@ import './filterTag.scss';
 interface TagItem {
     label: string;
     value: string;
+    count?: number;
 }
 
 interface FilterTagProps {
@@ -22,6 +23,8 @@ export default function FilterTag({ items, activeValue, onSelect }: FilterTagPro
                     onClick={() => onSelect(item.value)}
                 >
                     {item.label}
+                    {/* Hiển thị số lượng nhỏ bên cạnh */}
+                    <span className="ms-1 opacity-75 small">({item.count || 0})</span>
                 </button>
             ))}
         </div>
