@@ -1,7 +1,8 @@
 import React from "react";
 import "./cartProduct.scss";
 import Button from "../Button/Button";
-import { Product } from "../../data/products"; // Import interface từ file data
+import { Product } from "../../data/products";
+import Icon from "../Icons/Icon"; // Import interface từ file data
 
 // Định nghĩa props nhận vào danh sách data
 interface CardProductProps {
@@ -27,8 +28,17 @@ export default function CardProduct({
                 // Đổi key từ index sang p.id để tối ưu hiệu năng React
                 <div key={p.id} className="col">
                     <div className="card h-100 shadow-sm product-card">
-                        <img src={p.image} className="card-img-top" alt={p.title} />
-
+                        <div className="product-img-wrapper">
+                            <img src={p.image} className="card-img-top" alt={p.title} />
+                            <div className="product-actions">
+                                <div className="action-btn">
+                                    <Icon icon="heart" />
+                                </div>
+                                <div className="action-btn">
+                                    <Icon icon="shopping-cart" />
+                                </div>
+                            </div>
+                        </div>
                         <div className="card-body">
                             <h5 className="card-title fw-bold">{p.title}</h5>
                             <p className="card-text text-muted">{p.description}</p>
