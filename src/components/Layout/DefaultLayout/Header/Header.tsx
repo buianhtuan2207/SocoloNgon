@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './header.scss';
 import Icon from '../../../Icons/Icon';
 import UserMenu from "../../../UserMenu/UserMenu";
 import { Link } from "react-router-dom";

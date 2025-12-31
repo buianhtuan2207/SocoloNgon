@@ -25,7 +25,7 @@ export const USERS: User[] = [
     {
         id: 3,
         name: "nhattruong",
-        email: "minh@gmail.com",
+        email: "nhattruong@gmail.com",
         password: "123456"
     }
 ];

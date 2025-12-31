@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './pagination.scss';
 import Icon from '../Icons/Icon'; // Giả sử bạn đã có component Icon
 
 export default function Pagination() {

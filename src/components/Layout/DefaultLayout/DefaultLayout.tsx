@@ -1,5 +1,4 @@
 import Header from './Header/Header'
-import './style.scss';
 import Footer from "./Footer/Footer";
 
 function DefaultLayout({ children }) {

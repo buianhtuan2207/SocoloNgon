@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss'; // File này có thể để trống hoặc thêm margin tùy ý
+import './sidebarFilter.scss'; // File này có thể để trống hoặc thêm margin tùy ý
 import FilterWidget from '../FilterWidget/FilterWidget';
 import FilterMenu from '../FilterMenu/FilterMenu';
 import FilterRadio from '../FilterRadio/FilterRadio';

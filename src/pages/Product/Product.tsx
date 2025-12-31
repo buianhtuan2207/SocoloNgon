@@ -1,16 +1,14 @@
 import React from 'react';
-import './style.scss';
+import './product.scss';
 
-// Import Component
 import SidebarFilter from '../../components/SidebarFilter/SidebarFilter';
 import SortBar from '../../components/SortBar/SortBar';
 import Pagination from '../../components/Pagination/Pagination';
-import CardProduct from '../../components/CardProduct/CardProduct'; // Tái sử dụng cái cũ của bạn
+import CardProduct from '../../components/CardProduct/CardProduct';
 
-// Import Data
 import { PRODUCTS } from '../../data/products';
 
-export default function ProductsPage() {
+export default function Products() {
     return (
         <div className="products-page">
             <div className="container">

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './footer.scss';
 import Icon from '../../../Icons/Icon';
 import Icons from "../../../Icons/Icon";
 

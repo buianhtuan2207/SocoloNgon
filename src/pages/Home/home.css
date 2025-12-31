@@ -10,6 +10,7 @@ body {
 .home-content .form-banner {
   display: flex;
   gap: 30px;
+  margin: 0 30px;
 }
 
 /*# sourceMappingURL=home.css.map */

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './filterTag.scss';
 
 interface TagItem {
     label: string;

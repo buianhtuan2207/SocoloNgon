@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './filterRadio.scss';
 
 interface RadioItem {
     id: string;
@@ -13,7 +13,7 @@ interface FilterRadioProps {
     items: RadioItem[];
 }
 
-export default function FilterRadio({ name, items }: FilterRadioProps) {
+export default function FilterRadio({name, items}: FilterRadioProps) {
     return (
         <div className="filter-radio d-flex flex-column gap-2">
             {items.map((item) => (

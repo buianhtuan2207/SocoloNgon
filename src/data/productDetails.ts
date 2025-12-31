@@ -1,8 +1,5 @@
 // src/data/productDetails.ts
 
-import { PRODUCTS } from "./products";
-
-
 export interface ProductDetail {
     id: number;
     subtitle?: string;

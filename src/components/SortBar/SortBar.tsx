@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import './sortbar.scss';
 
 interface SortBarProps {
     title: string;
