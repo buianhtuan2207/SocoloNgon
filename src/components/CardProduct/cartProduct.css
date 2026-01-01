@@ -3,22 +3,25 @@
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
   background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .product-card:hover .product-actions {
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: translateX(0) !important;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
 .product-card:hover .product-img-wrapper::after {
   opacity: 1;
+}
+.product-card {
+  /* ===== IMAGE ===== */
 }
 .product-card .product-img-wrapper {
   position: relative;
@@ -32,14 +35,14 @@
 .product-card .product-img-wrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
+}
+.product-card {
+  /* ===== ACTION ICONS ===== */
 }
 .product-card .product-actions {
   position: absolute;
@@ -48,33 +51,69 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  z-index: 99;
+  z-index: 10;
   visibility: hidden;
   opacity: 0;
   transform: translateX(20px);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .product-card .action-btn {
   width: 35px;
   height: 35px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #333;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
-  color: #333;
 }
 .product-card .action-btn:hover {
-  background: var(--bg-dard);
-  color: #ffffff;
+  background: var(--bg-dark, #5d4037);
+  color: #fff;
   transform: scale(1.1);
 }
-.product-card .action-btn svg, .product-card .action-btn i, .product-card .action-btn span {
+.product-card .action-btn svg,
+.product-card .action-btn i,
+.product-card .action-btn span {
   font-size: 16px;
-  display: block;
   color: inherit;
+  display: block;
+}
+.product-card {
+  /* ===== BODY ===== */
+}
+.product-card .card-body {
+  padding: 12px 15px;
+  background: #fff;
+}
+.product-card .card-body .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.product-card .card-body .card-text {
+  font-size: 0.85rem;
+  color: #666;
+  height: 38px;
+  overflow: hidden;
+}
+.product-card {
+  /* ===== FOOTER ===== */
+}
+.product-card .card-footer {
+  padding: 12px 15px;
+}
+.product-card .card-footer .price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d32f2f;
+}
+.product-card .card-footer .btn-primary {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
 }
 
 /*# sourceMappingURL=cartProduct.css.map */

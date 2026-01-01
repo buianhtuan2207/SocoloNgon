@@ -1,0 +1,37 @@
+$primary-orange: #e65100;
+
+.filter-menu {
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    color: #666;
+    transition: 0.2s;
+    font-size: 0.95rem;
+
+    &:hover {
+      color: $primary-orange;
+    }
+
+    &.active {
+      color: $primary-orange;
+      font-weight: 700;
+
+      .count {
+        background-color: lighten($primary-orange, 45%);
+        color: $primary-orange;
+        font-weight: 700;
+      }
+    }
+
+    .count {
+      background-color: #f8f9fa;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #999;
+    }
+  }
+}
