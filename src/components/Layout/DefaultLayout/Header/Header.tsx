@@ -2,10 +2,14 @@ import React from 'react';
 import './header.scss';
 import Icon from '../../../Icons/Icon';
 import UserMenu from "../../../UserMenu/UserMenu";
-import { Link, NavLink } from "react-router-dom"; // Dùng NavLink để có class 'active' tự động
+import { Link, NavLink } from "react-router-dom";
+import { useWishlist } from "../../../../context/WishlistContext";
+import {useAuth} from "../../../../context/AuthContext";
+
 
 export default function Header() {
-    const user = JSON.parse(localStorage.getItem("user") || "null");
+    const { user } = useAuth();
+    const { wishlist } = useWishlist();
 
     return (
         <header className="header shadow-sm">
@@ -17,10 +21,10 @@ export default function Header() {
 
                 {/* Nav Menu -> Điều hướng các trang */}
                 <nav className="menu d-none d-lg-flex">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
-                    <NavLink to="/product" className={({ isActive }) => isActive ? "active-link" : ""}>Products</NavLink>
-                    <NavLink to="/promotions" className={({ isActive }) => isActive ? "active-link" : ""}>Promotions</NavLink>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About</NavLink>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Trang chủ</NavLink>
+                    <NavLink to="/product" className={({ isActive }) => isActive ? "active-link" : ""}>Sản phẩm</NavLink>
+                    <NavLink to="/promotions" className={({ isActive }) => isActive ? "active-link" : ""}>Khuyến mại</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>Giới thiệu</NavLink>
                 </nav>
 
                 {/* Search Box */}
@@ -41,7 +45,12 @@ export default function Header() {
                     {/* Wishlist -> Đến trang yêu thích */}
                     <Link to="/wishlist" className="icon-link">
                         <Icon icon="heart" />
-                        <span className="count-badge">2</span> {/* Bạn có thể logic count sau */}
+
+                        {user && wishlist.length > 0 && (
+                            <span className="count-badge">
+                                {wishlist.length}
+                            </span>
+                        )}
                     </Link>
 
                     {/* Cart -> Đến trang giỏ hàng */}

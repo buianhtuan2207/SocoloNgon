@@ -2,8 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./cartProduct.scss";
 import Button from "../Button/Button";
-import { Product } from "../../data/products";
+import Icon from "../Icons/Icon";
+import {Product} from "../../data/products";
+import {useWishlist} from "../../context/WishlistContext";
+import {useAuth} from "../../context/AuthContext";
 
+
+
+// Định nghĩa props nhận vào danh sách data
 interface CardProductProps {
     data: Product[];
     buttonLink?: string;
@@ -12,22 +18,53 @@ interface CardProductProps {
 
 export default function CardProduct({
                                         data,
+                                        buttonLink = "#",
                                         buttonText = "Mua ngay"
                                     }: CardProductProps) {
 
     const formatVND = (price: number) => {
         return price.toLocaleString("vi-VN") + " ₫";
     };
+    const { toggleWishlist, isInWishlist } = useWishlist();
+    const { user } = useAuth();
+
 
     return (
         <div className="row row-cols-1 row-cols-md-4 g-4">
             {data.map((p) => (
+                // Đổi key từ index sang p.id để tối ưu hiệu năng React
                 <div key={p.id} className="col">
                     <div className="card h-100 shadow-sm product-card">
-                        <Link to={`/product/${p.id}`} className="text-decoration-none">
-                            <img src={p.image} className="card-img-top" alt={p.title} />
-                        </Link>
 
+                        <div className="product-img-wrapper">
+                            <Link to={`/product/${p.id}`} className="text-decoration-none">
+                                <img src={p.image} className="card-img-top" alt={p.title} />
+                            </Link>
+                            <div className="product-actions">
+                                <div
+                                    className={`action-btn wishlist-btn ${
+                                        isInWishlist(p.id) ? "active" : ""
+                                    }`}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+
+                                        if (!user) {
+                                            alert("Vui lòng đăng nhập để thêm vào wishlist");
+                                            return;
+                                        }
+
+                                        toggleWishlist(p);
+                                    }}
+                                >
+                                    <Icon icon="heart" />
+                                </div>
+
+                                <div className="action-btn">
+                                    <Icon icon="shopping-cart" />
+                                </div>
+                            </div>
+                        </div>
                         <div className="card-body">
                             <Link to={`/product/${p.id}`} className="text-decoration-none text-dark">
                                 <h5 className="card-title fw-bold">{p.title}</h5>
@@ -42,8 +79,6 @@ export default function CardProduct({
                                 <Button
                                     variant="primary"
                                     size="small"
-                                    icons
-                                    href={undefined}
                                 >
                                     {buttonText}
                                 </Button>
