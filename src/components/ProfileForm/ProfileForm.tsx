@@ -92,7 +92,12 @@ export default function ProfileForm() {
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtVnJ7sN3GqGudC85JCaTEv_fYLDD9WKlmBah5pGd7U-LnXU_DaeZ2M5ra_aTK0sKXVnC7fTvC-QAJgs3wbfK2NcWD1OCGo7axCGgCmRNkOvAVRonoPxAI7_p6w2PK23m4wprKix2UMAp8kRkclFZsXAujmDsfwkclyPpTr9El5v9cGjtuAG_uQv0uvedSxvsQoSZzth2sMGU6xVcV_Rxk6potw_ktZNUVpJybW2jlIpCzvTPTXnuigph5sb7zsHPnvmkgbtEsOAK"
                             alt="Current Avatar"/>
                     </div>
-                    <Button variant="outline" size="small" className="btn-choose-img" href={undefined}>
+                    <Button
+                        variant="text"
+                        size="small"
+                        className="btn-choose-img"
+                        href={undefined}
+                    >
                         Chọn ảnh
                     </Button>
                     <div className="avatar-desc">

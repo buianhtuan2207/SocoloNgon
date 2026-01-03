@@ -90,7 +90,6 @@
   font-size: 14px;
   transition: 0.2s;
   color: #333;
-  /* Cập nhật: padding chuẩn, không cần chừa chỗ cho nút nữa */
 }
 .profile-form-wrapper .form-inputs .form-group .input-box input:focus, .profile-form-wrapper .form-inputs .form-group .input-box textarea:focus {
   border-color: #d35400;
@@ -186,6 +185,16 @@
   color: #999;
   text-align: center;
   line-height: 1.5;
+}
+
+/* Class làm mờ nút Save (Nằm ngoài cùng, không lồng vào .profile-form-wrapper) */
+.disabled-btn-wrapper {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.disabled-btn-wrapper > * {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=profileForm.css.map */

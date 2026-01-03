@@ -35,7 +35,7 @@ const publicRoutes: AppRoute[] = [
     },
     {path: "/product", component: Products },
     {path: "/product/:id", component: ProductDetailPage },
-    { path: "/profile", component: Profile },
+    {path: "/profile", component: Profile },
 ];
 
 const privateRoutes: AppRoute[] = [];
